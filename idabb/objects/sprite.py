@@ -92,7 +92,7 @@ class Sprite(object):
         return False
 
     def inverse_intersects(self, d1, d2, x_or_y='x'):
-        if x_or_y is 'x':
+        if x_or_y == 'x':
             if self.left <= d1 <= self.right or self.left <= d2 <= self.right:
                 return True
         else:
