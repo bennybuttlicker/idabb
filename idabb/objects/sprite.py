@@ -4,7 +4,6 @@ class Sprite(object):
     LEFT = 1
     RIGHT = 4
     DOWN = 10
-
     UP = 40
 
     def __init__(self, resource, **kwargs):
