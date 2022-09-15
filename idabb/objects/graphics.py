@@ -98,12 +98,8 @@ class Box(Shape):
             return (
                 self.left, self.bottom, #bottom left corner
                 self.left, self.top, #top left corner
-                self.left, self.top, #top left corner
-                self.right, self.top, #top right corner
                 self.right, self.top, #top right corner
                 self.right, self.bottom, #top bottom corner
-                self.right, self.bottom, #top bottom corner
-                self.left, self.bottom #bottom left corner
             )
     
     @property
