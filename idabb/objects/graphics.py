@@ -87,7 +87,7 @@ class Box(Shape):
     """ Draws rectangles and squares """
     @property
     def vertices(self):
-        if self.outline is False:
+        if self.outline == False:
             return (
                 self.left, self.bottom, #bottom left corner
                 self.left, self.top, #top left corner
@@ -107,7 +107,7 @@ class Box(Shape):
         return self.color * vertices
 
     def draw(self):
-        if self.outline is False:
+        if self.outline == False:
             pyglet.graphics.draw(4, pyglet.gl.GL_QUADS, (
                 'v2f', self.vertices,
             ), ('c4f', self.vertice_colors))
