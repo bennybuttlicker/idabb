@@ -1,9 +1,10 @@
 class Sprite(object):
-    LEFT = 1
     STATIC_X = 2
+    STATIC_Y = 20
+    LEFT = 1
     RIGHT = 4
     DOWN = 10
-    STATIC_Y = 20
+
     UP = 40
 
     def __init__(self, resource, **kwargs):
