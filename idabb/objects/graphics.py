@@ -63,7 +63,7 @@ class Shape():
 class Triangle(Shape):
     """ Draws isosceles and equalateral triangles """
     @property
-    def verticies(self):
+    def vertices(self):
         return (
             self.left, self.bottom,
             self.right, self.bottom,
@@ -76,7 +76,7 @@ class Triangle(Shape):
 
     def draw(self):
         pyglet.graphics.draw(3, pyglet.gl.GL_TRIANGLES, (
-            'v2f', self.verticies,
+            'v2f', self.vertices,
         ), ('c4f', self.vertice_colors))
 
 class Box(Shape):
@@ -86,7 +86,7 @@ class Box(Shape):
 
     """ Draws rectangles and squares """
     @property
-    def verticies(self):
+    def vertices(self):
         if self.outline is False:
             return (
                 self.left, self.bottom, #bottom left corner
@@ -109,9 +109,9 @@ class Box(Shape):
     def draw(self):
         if self.outline is False:
             pyglet.graphics.draw(4, pyglet.gl.GL_QUADS, (
-                'v2f', self.verticies,
+                'v2f', self.vertices,
             ), ('c4f', self.vertice_colors))
         else:
             pyglet.graphics.draw(8, pyglet.gl.GL_LINES, (
-                'v2f', self.verticies,
+                'v2f', self.vertices,
             ), ('c4f', self.color * 8))
